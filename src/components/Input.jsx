@@ -29,7 +29,7 @@ export const Input = ({ taskList, setTaskList }) => {
     if (selectedItems.includes(id)) {
       setSelectedItems(selectedItems.filter((item) => item !== id));
     } else {
-      setSelectedItems([...selectedItems, id]); // Öğeyi seç
+      setSelectedItems([...selectedItems, id]);
     }
   };
 
@@ -57,8 +57,20 @@ export const Input = ({ taskList, setTaskList }) => {
   console.log(person3.name);
   console.log(person3.bio());
 
+  // FUNCTIONS;
   const addSum = (a, b) => a + b;
-  addSum(4, 6);
+  console.log(addSum(4, 6));
+
+  function reverse_a_number(n) {
+    // Convert the input number to a string
+    n = n + "";
+
+    // Split the string into an array of characters, reverse the array, and then join the characters back into a string
+    return n.split("").reverse().join("");
+  }
+
+  // Convert the reversed string back to a number and log it to the console
+  console.log(Number(reverse_a_number(32243)));
 
   return (
     <>
@@ -75,6 +87,18 @@ export const Input = ({ taskList, setTaskList }) => {
       </form>
 
       <table>
+        <thead>
+          <tr>
+            <th>
+              <input
+                type="checkbox"
+                checked={selectAll}
+                onClick={handleSelectAll}
+              />
+            </th>
+            <th>Item</th>
+          </tr>
+        </thead>
         <thead>
           <tr>
             <th>
