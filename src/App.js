@@ -1,8 +1,8 @@
-import "./App.css";
-import { Input } from "./components/Input";
 import React, { useState } from "react";
+import { Input } from "./components/Input";
+import "./App.css";
 
-function App() {
+export const App = () => {
   const [taskList, setTaskList] = useState([]);
   return (
     <div className="App">
@@ -16,6 +16,4 @@ function App() {
       })}
     </div>
   );
-}
-
-export default App;
+};
