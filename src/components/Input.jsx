@@ -35,8 +35,14 @@ export const Input = ({ taskList, setTaskList }) => {
 
   // OBJECTS
   const person = {};
-  // console.log("person", person);
   const person2 = {
+    name: ["kenan", "ramal"],
+    age: "32",
+    bio: function () {
+      console.log(`${this.name} is ${this.age} old`);
+    },
+  };
+  const person3 = {
     name: ["kenan", "ramal"],
     age: "32",
     bio: function () {
@@ -46,6 +52,13 @@ export const Input = ({ taskList, setTaskList }) => {
   console.log(person2.age);
   console.log(person2.name);
   console.log(person2.bio());
+
+  console.log(person3.age);
+  console.log(person3.name);
+  console.log(person3.bio());
+
+  const addSum = (a, b) => a + b;
+  addSum(4, 6);
 
   return (
     <>

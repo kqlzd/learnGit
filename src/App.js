@@ -5,7 +5,7 @@ import "./App.css";
 export const App = () => {
   const [taskList, setTaskList] = useState([]);
   return (
-    <div className="App">
+    <>
       <Input taskList={taskList} setTaskList={setTaskList} />
       {taskList.map((item) => {
         return (
@@ -14,6 +14,6 @@ export const App = () => {
           </ul>
         );
       })}
-    </div>
+    </>
   );
 };
