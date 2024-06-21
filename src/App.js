@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Input } from "./components/Input";
-import "./App.css";
 
-export const App = () => {
+export default function App() {
   const [taskList, setTaskList] = useState([]);
   return (
     <>
@@ -16,4 +15,4 @@ export const App = () => {
       })}
     </>
   );
-};
+}

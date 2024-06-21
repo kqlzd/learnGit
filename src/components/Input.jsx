@@ -4,6 +4,7 @@ export const Input = ({ taskList, setTaskList }) => {
   const [input, setInput] = useState("");
   const [selectedItems, setSelectedItems] = useState([]);
   const [selectAll, setSelectAll] = useState(false);
+  const [dark, setDark] = useState(false);
 
   const handleChange = (value) => {
     setInput(value);
@@ -34,46 +35,47 @@ export const Input = ({ taskList, setTaskList }) => {
   };
 
   // OBJECTS
-  const person = {};
-  const person2 = {
-    name: ["kenan", "ramal"],
-    age: "32",
-    bio: function () {
-      console.log(`${this.name} is ${this.age} old`);
-    },
+  var student = {
+    name: "david",
+    sclass: "6",
+    rollNo: "12",
   };
-  const person3 = {
-    name: ["kenan", "ramal"],
-    age: "32",
-    bio: function () {
-      console.log(`${this.name} is ${this.age} old`);
+  console.log("student ---- ", student.name, student.rollNo, student.sclass);
+  delete student.rollNo;
+  console.log("student2 ---- ", student.name, student.rollNo, student.sclass);
+  console.log(student.length);
+
+  var library = [
+    {
+      title: "Bill Gates",
+      author: "The Road Ahead",
+      readingStatus: true,
     },
-  };
-  console.log(person2.age);
-  console.log(person2.name);
-  console.log(person2.bio());
-
-  console.log(person3.age);
-  console.log(person3.name);
-  console.log(person3.bio());
-
-  // FUNCTIONS;
-  const addSum = (a, b) => a + b;
-  console.log(addSum(4, 6));
-
-  function reverse_a_number(n) {
-    // Convert the input number to a string
-    n = n + "";
-
-    // Split the string into an array of characters, reverse the array, and then join the characters back into a string
-    return n.split("").reverse().join("");
+    {
+      title: "Steve Jobs",
+      author: "Walter Isaacson",
+      readingStatus: true,
+    },
+    {
+      title: "Mockingjay: The Final Book of The Hunger Games",
+      author: "Suzanne Collins",
+      readingStatus: false,
+    },
+  ];
+  console.log("lib", library);
+  for (let i = 0; i < library.length; i++) {
+    var book = "'" + library[i].author + "by" + library[i].title;
+    console.log(book);
   }
 
-  // Convert the reversed string back to a number and log it to the console
-  console.log(Number(reverse_a_number(32243)));
-
+  // FUNCTIONS;
   return (
-    <>
+    <div
+      style={{
+        backgroundColor: dark ? "black" : "white",
+        color: dark ? "black" : "white",
+      }}
+    >
       <form>
         <input
           type="text"
@@ -85,7 +87,6 @@ export const Input = ({ taskList, setTaskList }) => {
         <button type="submit">submit</button> <br /> <br />
         <button>click</button>
       </form>
-
       <table>
         <thead>
           <tr>
@@ -96,7 +97,6 @@ export const Input = ({ taskList, setTaskList }) => {
                 onClick={handleSelectAll}
               />
             </th>
-            <th>Item</th>
           </tr>
         </thead>
         <thead>
@@ -126,6 +126,8 @@ export const Input = ({ taskList, setTaskList }) => {
           ))}
         </tbody>
       </table>
-    </>
+      <button onClick={() => setDark(true)}>Dark Mode</button>
+      <button onClick={() => setDark(false)}>Light Mode</button>
+    </div>
   );
 };
