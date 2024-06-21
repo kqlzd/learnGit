@@ -77,6 +77,7 @@ export const Input = ({ taskList, setTaskList }) => {
       }}
     >
       <h1>MASTER</h1>
+
       <form>
         <input
           type="text"
