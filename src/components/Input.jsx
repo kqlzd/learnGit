@@ -73,7 +73,7 @@ export const Input = ({ taskList, setTaskList }) => {
     <div
       style={{
         backgroundColor: dark ? "black" : "white",
-        color: dark ? "black" : "white",
+        color: dark ? "black" : "red",
       }}
     >
       <form>
