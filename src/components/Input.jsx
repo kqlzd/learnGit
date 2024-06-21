@@ -73,7 +73,7 @@ export const Input = ({ taskList, setTaskList }) => {
     <div
       style={{
         backgroundColor: dark ? "black" : "white",
-        color: dark ? "black" : "white",
+        color: dark ? "black" : "yellow",
       }}
     >
       <form>
@@ -86,6 +86,7 @@ export const Input = ({ taskList, setTaskList }) => {
         <button onClick={handleAddTask}>add</button>
         <button type="submit">submit</button> <br /> <br />
         <button>click</button>
+        <button>click2</button>
       </form>
       <table>
         <thead>
