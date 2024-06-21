@@ -97,7 +97,6 @@ export const Input = ({ taskList, setTaskList }) => {
                 onClick={handleSelectAll}
               />
             </th>
-            <th>Item</th>
           </tr>
         </thead>
         <thead>
