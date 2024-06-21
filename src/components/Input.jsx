@@ -76,6 +76,7 @@ export const Input = ({ taskList, setTaskList }) => {
         color: dark ? "black" : "yellow",
       }}
     >
+      <h1>MASTER</h1>
       <form>
         <input
           type="text"
